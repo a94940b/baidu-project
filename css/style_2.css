@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,ol,dl {
+  list-style: none;
+}
+body {
+  padding: 20px;
+  line-height: 1.5;
+}
+section {
+  margin: 20px 0;
+}
+.clearfix::after {
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+.flex {
+  display: flex;
+}
+body .main section {
+  display: block;
+}
+.sidebar {
+  width: 10%;
+  color: #fff;
+  background-color: skyblue;
+  text-align: center;
+  padding-top: 20px;
+  margin-right: 20px;
+  min-width: 50px;
+}
+.main {
+  width: 90%;
+  flex: 1;
+  min-width: 580px;
+}
+
+strong span {
+  font-weight: normal;
+}
+strong {
+  display: inline-block;
+  margin-right: 20px;
+}
+.basic-information ul li {
+  float: left;
+}
+.contact ul li {
+  float: left;
+}

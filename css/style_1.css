@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,ol,dl {
+  list-style: none;
+}
+section {
+  margin: 20px 0;
+}
+.clearfix::after {
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+strong span {
+  font-weight: normal;
+}
+strong {
+  display: inline-block;
+  margin-right: 20px;
+}
+.basic-information ul li {
+  float: left;
+}
+.contact ul li {
+  float: left;
+}

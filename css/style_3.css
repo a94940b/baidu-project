@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul,ol,dl {
+  list-style: none;
+}
+body {
+  padding: 20px;
+  line-height: 1.5;
+}
+section {
+  border: 1px solid #eee;
+}
+.clearfix::after {
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.fll {
+  float: left;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+body > .wrap {
+  display: block;
+}
+h1 {
+  background-color: #aaa;
+  padding: 10px;
+}
+h2 {
+  line-height: 76px;
+  background-color: #ccc;
+  padding: 10px;
+  margin-right: 10px;
+}
+h3,
+p {
+  display: inline-block;
+}
+strong span {
+  font-weight: normal;
+}
+strong {
+  margin-right: 20px;
+}
+.basic-information ul li {
+  float: left;
+}
+.contact ul li {
+  float: left;
+}
