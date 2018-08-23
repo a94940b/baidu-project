@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+
+html {
+  background-color: #eee;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Microsoft YaHei", "SimSun";
+}
+body {
+  background-color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  min-width: 480px;
+  max-width: 1280px;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 2;
+  text-decoration: underline;
+  border: 3px dashed #ccc;
+}
+#title {
+  font-weight: 900;
+  font-size: 5rem;
+  text-align: center;
+  text-shadow: .2rem .2rem .2rem rgba(100,100,100,.5);
+  background: linear-gradient(to bottom, skyblue, pink);
+}
+#self-appraisal {
+  text-indent: 2em;
+}
+#self-appraisal h2 {
+  text-indent: 0;
+}
+/*在使用first-child这个伪类选择器的时候，一定要保证前面没有其他元素作为兄弟节点，否则就会失效*/
+#self-appraisal > div > p:first-child {
+  border: 1px solid red;
+}
+#products a {
+  text-decoration: none;
+  color: green;
+}
+#products a:visited {
+  color: grey;
+}
+#products a:hover {
+  text-decoration: underline;
+  color: red;
+}
+#products a:active {
+  color: purple;
+}
+#front-end-skills-list > li + li {
+  margin: 5px 0;
+  border-top: 1px solid #eee
+}

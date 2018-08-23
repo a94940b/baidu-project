@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>袁星浩的个人简历</title>
+  <link rel="stylesheet" href="demo.css">
+  <style>
+  #func {
+    position: relative;
+  }
+  #say-hello {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  </style>
+</head>
+<body>
+  <h1 id="title">个人简历</h1>
+  <section id="func">
+    <button id="say-hello">打个招呼吧~</button>
+  </section>
+  <header id="basic-information">
+    <h2>基本信息</h2>
+    <ul id="basic-information-list">
+      <li>
+        <span>姓名: </span>袁星浩
+      </li>
+      <li>
+        <span>年龄: </span>25岁
+      </li>
+      <li>
+        <span>求职意向: </span>初级前端工程师
+      </li>
+      <li>
+        <span>地址: </span>广州
+      </li>
+      <li>
+        <span>邮箱: </span>784368611@qq.com
+      </li>
+      <li>
+        <span>联系电话: </span>159-0270-7164
+      </li>
+    </ul>
+  </header>
+  <section id="education-background">
+    <h2>教育背景</h2>
+    <p id="graduate-time">2012.9-2016.6</p>
+    <p id="graduate-school">武汉轻工大学</p>
+    <ul id="performance-in-school">
+      <li>GPA:3.2/4.0</li>
+      <li>校级一等奖学金</li>
+      <li>企业奖学金</li>
+    </ul>
+    <p id="english-ability">CET-6，良好的听说写能力</p>
+  </section>
+  <section id="working-background">
+    <h2>工作背景</h2>
+    <p id="company-gt">致同会计师事务所（广州分所）</p>
+    <p id="gt-time">2017.3-2018.4</p>
+    <p id="gt-position">审计助理</p>
+    <p id="gt-work-content">配合审计经理进行企业年报审计、专项审计、政府部门及事业单位经济责任审计等具体负责收入、费用，以及固定资产、无形资产等企业核心会计核算科目的审计工作</p>
+  </section>
+  <section id="front-end-skills">
+    <h2>前端技能</h2>
+    <ol id="front-end-skills-list">
+      <li>熟悉DIV+CSS页面制作，掌握常用的两栏、三栏布局，以及flex布局；</li>
+      <li>熟悉HTML5/CSS3标准并对跨浏览器和平台的兼容有一定程度了解；</li>
+      <li>初步了解Vue框架，有仿写去哪儿网移动web的开发经验，初步理解组件间传值、vue-router和生命周期函数等；</li>
+      <li>初步运用Bootstrap前端开发框架进行基本的响应式网页开发，仿写微金所响应式页面项目；</li>
+      <li>基本掌握JavaScript，jQuery， 熟悉Ajax以及json等数据交换格式；</li>
+      <li>掌握基本的Linux命令行操作以及github操作；</li>
+      <li>掌握基本的npm、nvm等包管理工具，了解webpack等前端自动化构建工具；</li>
+      <li>了解部分ESPA6.0常用语法。</li>
+    </ol>
+  </section>
+  <section id="products">
+    <h2>作品展示</h2>
+    <ul>
+      <li><a href="https://a94940b.github.io/weijinsuo-bootstrap-demo/" target="_blank">bootstrap 响应式页面展示地址</a></li>
+      <li><a href="yuanxinghao.top" target="_blank">个人博客</a></li>
+    </ul>
+  </section>
+  <section id="self-appraisal">
+      <h2>自我评价</h2>
+      <div>
+        <p>我性格乐观向上，处事自信大方，待人和善，责任感强。在校成绩优异，工作能力也受到领导肯定。喜欢与同事们打成一片的工作氛围，通过组员协同作战解决问题是我熟悉的工作方式。
+        </p>
+        <p>审计的从业经历培养了我严谨认真的工作态度，提升了与客户沟通并解决问题的能力，也让我适应了高强度的工作节奏和多任务处理的工作模式。作为一名前端新兵转入互联网从业，是一个不小的挑战，但我相信我有能力完成蜕变，期望能为未来的雇主创造更多更大的价值。
+        </p>
+      </div>
+  </section>
+  
+  <script>
+    var func = document.querySelector('#func');
+    var hello = document.querySelector('#say-hello');
+    hello.addEventListener("click",sayHello);
+
+    function sayHello() {
+      var habit = document.createElement("p");
+      habit.textContent = "我爱好篮球，大学期间是篮球协会的骨干成员，还执法过全国比赛哦~ 虽然是U13 哈哈";
+      func.appendChild(habit);
+    }
+  </script>
+</body>
+</html>

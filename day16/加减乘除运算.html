@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>IFE ECMAScript</title>
+</head>
+
+<body>
+  <input id="first-number" type="number" value="0" placeholder="第一个数字">
+  <input id="second-number" type="number" value="0" placeholder="第二个数字">
+  <button id="add-btn">加</button>
+  <button id="minus-btn">减</button>
+  <button id="times-btn">乘</button>
+  <button id="divide-btn">除</button>
+  <p id="result">运算结果</p>
+  <script>
+    // 获取用户输入的数字
+    var firstNumber = document.getElementById('first-number');
+    console.log(typeof firstNumber.value);
+    var secondNumber = document.getElementById('second-number');
+
+    // 获取按钮以及其他节点
+    var res = document.getElementById('result');
+    var add = document.getElementById('add-btn');
+    var minus = document.getElementById('minus-btn');
+    var times = document.getElementById('times-btn');
+    var divide = document.getElementById('divide-btn');
+    var result;
+
+    // 添加事件监听
+    add.addEventListener("click",addCal);
+    minus.addEventListener("click",minusCal);
+    times.addEventListener("click",timesCal);
+    divide.addEventListener("click",divideCal);
+
+
+    // 
+    function addCal() {
+      // 用户输入的值为string类型，要将其转换为number类型才能正确运算。
+      result = Number(firstNumber.value) + Number(secondNumber.value);
+      res.textContent = "运算结果： " + result;
+    };
+    function minusCal() {
+      // 用户输入的值为string类型，要将其转换为number类型才能正确运算。
+      result = Number(firstNumber.value) - Number(secondNumber.value);
+      res.textContent = "运算结果： " + result;
+    };
+    function timesCal() {
+      // 用户输入的值为string类型，要将其转换为number类型才能正确运算。
+      result = Number(firstNumber.value) * Number(secondNumber.value);
+      res.textContent = "运算结果： " + result;
+    };
+    function divideCal() {
+      // 用户输入的值为string类型，要将其转换为number类型才能正确运算。
+      // 除法函数要先判断除数是否为0，为0时抛出异常
+      var divisor = Number(secondNumber.value);
+      //如果输入的除数为0，抛出异常
+      //使用try-catch结构抛出异常，记住不要在结果元素上输出异常，用弹窗输出。因为除数为0时计算结果有值：infinity（无穷大），结果值会覆盖掉异常。
+      try {
+        if(divisor === 0) {
+          throw '除数不得为0';
+        }
+      } catch(err) {
+        alert(err + '请重新输入除数');
+        console.log(err);
+      }
+      result = Number(firstNumber.value) / Number(secondNumber.value);
+      res.textContent = "运算结果： " + result;
+    };
+  </script>
+</body>
+
+</html>
