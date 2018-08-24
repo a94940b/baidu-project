@@ -145,13 +145,13 @@ footer {
 .content article:nth-child(1),
 .content article:nth-child(2),
 .content article:nth-child(3) {
-  flex: 288px;
+  flex: 1 280px;
 }
 .content article:nth-child(4),
 .content article:nth-child(5),
 .content article:nth-child(6),
 .content article:nth-child(7) {
-  flex: 200px;
+  flex: 1 200px;
 }
 .content article:nth-child(8),
 .content article:nth-child(9),

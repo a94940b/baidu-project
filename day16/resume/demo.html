@@ -5,20 +5,20 @@
   <title>袁星浩的个人简历</title>
   <link rel="stylesheet" href="demo.css">
   <style>
-  #func {
-    position: relative;
-  }
-  #say-hello {
-    position: absolute;
-    top: 0;
-    right: 0;
+  #btn-wrap {
+    width: 200px;
+    margin: 0 auto;
   }
   </style>
 </head>
 <body>
   <h1 id="title">个人简历</h1>
   <section id="func">
-    <button id="say-hello">打个招呼吧~</button>
+    <div id="btn-wrap">
+      <button id="hello">打个招呼吧~</button>
+      <button id="hobby">我的兴趣爱好</button>
+    </div>
+    <p id="message"></p>
   </section>
   <header id="basic-information">
     <h2>基本信息</h2>
@@ -92,14 +92,40 @@
   </section>
   
   <script>
-    var func = document.querySelector('#func');
-    var hello = document.querySelector('#say-hello');
+    var hello = document.querySelector('#hello');
+    var hobby = document.querySelector('#hobby');
+    var msg = document.querySelector('#message');
     hello.addEventListener("click",sayHello);
+    hobby.addEventListener("click",showHobby);
 
     function sayHello() {
-      var habit = document.createElement("p");
-      habit.textContent = "我爱好篮球，大学期间是篮球协会的骨干成员，还执法过全国比赛哦~ 虽然是U13 哈哈";
-      func.appendChild(habit);
+      // 一定要先清空段落信息，否则每点击一次就多加一条信息
+      msg.textContent = "";
+      msg.style.visibility = "visible";
+      msg.style.backgroundColor = "yellow";
+      msg.textContent = "很高兴认识你~  ^_^";
+    }
+
+    function showHobby() {
+      msg.textContent = "";
+      msg.style.visibility = "visible";
+      msg.style.backgroundColor = "grey";
+      var li = document.createElement('li');
+      var hobbyList = ['篮球', '电影', '摇滚'];
+      for(i = 0; i < hobbyList.length; i++) {
+        var hobbyItem = document.createElement('li');
+        hobbyItem.textContent = hobbyList[i];
+        msg.appendChild(hobbyItem);
+      }
+
+
+      var more = document.createElement('button');
+      more.textContent = "还不够？ 点我";
+      msg.appendChild(more);
+      more.addEventListener("click", openBlog);
+      function openBlog() {
+        window.location.href = "http://yuanxinghao.top";
+      }
     }
   </script>
 </body>
